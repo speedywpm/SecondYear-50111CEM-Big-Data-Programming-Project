@@ -8,8 +8,6 @@ This repository contains MATLAB code for analyzing big data using both parallel 
 * Prerequisites
 * Usage
 * File Descriptions
-* Contributing
-* License
 * Acknowledgments
 
 ## Getting Started
@@ -28,15 +26,11 @@ To run the code in this repository, you will need MATLAB installed on your local
 
 ## File Descriptions
 
-* `main_analysis.m`: The main script that handles the analysis process. It calls other functions as needed and generates the graphs for comparison.
-
-* `sequential_processing.m`: This script contains the code for analyzing big data using sequential processing.
-
-* `parallel_processing.m`: This script contains the code for analyzing big data using parallel processing.
-
-* `error_testing.m`: This script is responsible for NaN and text error testing during the analysis process.
-
-* `DDC_ver01_1_CAMS.m`: A function for Data Density Based Clustering, which is used as a part of the analysis process.
+* `main_analysis.m`: The main script that orchestrates the entire analysis process. It initializes the required parameters, reads input data, calls the appropriate functions for processing, performs error testing, and generates the comparison graphs for processing types and different processor counts.
+* `sequential_processing.m`: This script contains the code for analyzing big data using sequential processing. It processes the input data sequentially and outputs the results in a structured format. The processing includes clustering, calculation of statistics, and other relevant data analysis tasks.
+* `parallel_processing.m`: This script contains the code for analyzing big data using parallel processing. It takes advantage of multiple processor cores to process the input data in parallel, resulting in faster execution times. Similar to the sequential processing script, it performs clustering, calculation of statistics, and other data analysis tasks.
+* `error_testing.m`: This script is responsible for handling NaN and text error testing during the analysis process. It checks for any inconsistencies in the input data and ensures that the processing methods can handle these cases gracefully, preventing any potential crashes or incorrect results.
+* `DDC_ver01_1_CAMS.m`: A function for Data Density Based Clustering, which is used as a part of the analysis process. This function takes the input data and groups it into clusters based on its density in the data space. The clustering algorithm is highly efficient and scalable, making it well-suited for analyzing big data.
 
 ## Acknowledgments
 * R Hyde for the Data Density Based Clustering function (DDC_ver01_1_CAMS.m)
